@@ -42,7 +42,7 @@ export default function NaviBar() {
   return (
     <>
       <Styles>
-        <Navbar collapseOn expand="lg" bg="dark" variant="dark">
+        <Navbar fixed="top" collapseOn expand="lg" bg="dark" variant="dark">
           <Container>
             <NavbarBrand aria-disabled="disabled">WebDev Blog</NavbarBrand>
             <NavbarToggle aria-controls="responsive-navbar-nav" />

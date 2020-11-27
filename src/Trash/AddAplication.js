@@ -6,14 +6,14 @@ export const AddAplication = () => (
   <Container>
   <Form>
       <>
-        <Form.Check type="radio" id="/cabinet" label="radio 1" />
-        <Form.Check type="radio" id="" label="radio 2" />
-        <Form.Check type="radio" id="" label="radio 3" />
-        <Form.Check type="radio" id="" label="radio 4" />
-        <Form.Check type="radio" id="" label="radio 5" />
-        <Form.Check type="radio" id="" label="radio 6" />
-        <Form.Check type="radio" id="" label="radio 7" />
-        <Form.Check type="radio" id="" label="radio 8" />
+        <Form.Check type="radio" id="/cabinet" label="Тут" />
+        <Form.Check type="radio" id="" label="будет" />
+        <Form.Check type="radio" id="" label="текст" />
+        <Form.Check type="radio" id="" label="впадлу" />
+        <Form.Check type="radio" id="" label="вчера" />
+        <Form.Check type="radio" id="" label="было" />
+        <Form.Check type="radio" id="" label="его" />
+        <Form.Check type="radio" id="" label="писать" />
         <Form.Check type="radio" id="" label="radio 9" />
         <Form.Check type="radio" id="" label="radio 10" />
       </>
