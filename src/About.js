@@ -3,6 +3,9 @@ import {Container} from 'react-bootstrap'
 
 
 export const About = () =>  ( 
-
-  <Container></Container>
+<>
+  <Container style={{ paddingTop: "4rem"}}>
+  
+  </Container>
+  </>
   )

@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Col, Row, Form } from "react-bootstrap";
 
 export const FilingApp = () => (
-  <Container>
+  <Container style={{ paddingTop: "4rem"}}>
     <div className="mt-2">
       <Form>
         <Form.Group as={Row} controlId="formPlaintext">

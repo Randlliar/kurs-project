@@ -12,13 +12,12 @@ import {
   FormLabel,
   FormControl,
   FormText,
-  FormCheck,
-  Form,
+  FormCheck
 } from "react-bootstrap";
 import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
 import NavbarToggle from "react-bootstrap/esm/NavbarToggle";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import ModalHeader from "react-bootstrap/esm/ModalHeader";
 
 const Styles = styled.div`
@@ -42,9 +41,9 @@ export default function NaviBar() {
   return (
     <>
       <Styles>
-        <Navbar fixed="top" collapseOn expand="lg" bg="dark" variant="dark">
+        <Navbar collapseOn expand="lg" bg="dark" variant="dark">
           <Container>
-            <NavbarBrand aria-disabled="disabled">WebDev Blog</NavbarBrand>
+            <NavbarBrand aria-disabled="false">WebDev Blog</NavbarBrand>
             <NavbarToggle aria-controls="responsive-navbar-nav" />
             <NavbarCollapse id="responsive-navbar-nav">
               <Nav className="mr-auto">
@@ -59,7 +58,7 @@ export default function NaviBar() {
                 </Nav.Link>
               </Nav>
               <Nav>
-                <Button variant="primary" className="mr-2" onClick={handleShow}>
+                <Button variant="primary" className="mr-2" onClick={handleShow} >
                   Log In
                 </Button>
                 <Button variant="primary" onClick={handleClose}>
@@ -79,21 +78,21 @@ export default function NaviBar() {
         <ModalBody>
           <form>
             <FormGroup controlId="formBasicEmail">
-              <FormLabel> Email Adress </FormLabel>
+              <FormLabel>Email Address</FormLabel>
               <FormControl type="emali" placeholder="Enter email" />
               <FormText className="text-muted">
                 We'll never share your email
               </FormText>
             </FormGroup>
             <FormGroup controlId="formBasicPassword">
-              <FormLabel> Password </FormLabel>
+              <FormLabel>Password</FormLabel>
               <FormControl type="password" placeholder="Enter password" />
             </FormGroup>
             <FormGroup controlId="formBasicCheckbox">
               <FormCheck type="checkbox" label="Remember me" />
-            </FormGroup>
-            <FormGroup>
-              <Button href="/cabinet">Войти</Button>
+              <NavLink to="/cabinet">
+                <Button onClick={handleClose}>Войти</Button>
+              </NavLink>
             </FormGroup>
           </form>
         </ModalBody>

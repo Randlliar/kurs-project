@@ -3,7 +3,7 @@ import { Container, Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 export const Cabinet = () => (
-  <Container>
+  <Container style={{ paddingTop: "4rem"}}>
     <Row>
       <Col>
         <Link to="/addaplication">Application for documents</Link>
@@ -16,8 +16,9 @@ export const Cabinet = () => (
       </Col>
     </Row>
     <Row>
-      <Col>1 of 3</Col>
-      <Col>2 of 3 </Col>
+      <Col> <Link to="/newmessage">New Message</Link></Col>
+      <Col> <Link to="/departorg">Depart Org</Link></Col>
+      
       <Col>3 of 3</Col>
     </Row>
   </Container>

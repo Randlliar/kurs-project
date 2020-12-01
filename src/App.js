@@ -1,36 +1,32 @@
 import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import NaviBar from "./Components/Navibar";
-import Footer from "./Components/Footer";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import NaviBar from "./Components/NotAuthPages/Navibar";
+import Footer from "./Components/NotAuthPages/Footer";
+import Home from './Components/NotAuthPages/Home';
+import Users from './Components/NotAuthPages/Users';
+import About from './Components/NotAuthPages/About';
+import Cabinet from "./Components/Cabinet";
+import { Provider } from "react-redux";
+import { store } from './Redux/Stores/Store.js'
+import { TaxpayersMaket } from "./Components/TaxpayersMaket";
 
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
-import { Home } from "./Home";
-import { Users } from "./Users";
-import { About } from "./About";
-import { Cabinet } from "./Cabinet";
-import { FilingApp } from "./Trash/FilingApp";
-import { FilingDec } from "./Trash/FilingDec";
-import { AddAplication } from "./Trash/AddAplication";
-
-function App() {
+const App = () => {
   return (
-    <>
-      <Router>
+    <Provider store={store}>
+      <BrowserRouter>
         <NaviBar />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/users" component={Users} />
+          <Route exact path="/users" render={Users} />
           <Route exact path="/about" component={About} />
           <Route exact path="/cabinet" component={Cabinet} />
-          <Route exact path="/filingapp" component={FilingApp} />
-          <Route exact path="/filingdec" component={FilingDec} />
-          <Route exact path="/addaplication" component={AddAplication} />
+          <Route path="/taxpayers" component={TaxpayersMaket} />
         </Switch>
-      </Router>
+      </BrowserRouter>
       <Footer />
-    </>
+    </Provider>
   );
 }
 

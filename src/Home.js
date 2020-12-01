@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  Card,
-  CardImg,
-  Collapse,
-  Container,
-  Row,
-  Button,
-  Col,
-} from "react-bootstrap";
+import { Card, CardImg, Container, Row, Col } from "react-bootstrap";
 import Slider from "./Components/Slider";
 import Jumbotron from "./Components/Jumbotron";
 import city from "./city.jpg";
@@ -15,7 +7,7 @@ import city from "./city.jpg";
 export const Home = () => (
   <>
     <Slider />
-    <Container style={{ paddingTop: "2rem", paddingBottom: "2rem" }}>
+    <Container style={{ paddingTop: "2rem",  paddingBottom: "2rem" }}>
       <Row>
         <Col>
           <Card style={{ width: "18rem" }}>
