@@ -6,12 +6,31 @@ import { NewDeclarationPart } from './Taxpayers/NewDeclarationPart';
 import LeftToolBar from './LeftToolBar'
 import { Switch, Route } from "react-router-dom";
 
+const sidebarUrls = [
+    {
+        title: 'Registration',
+        url: '/registration'
+    },
+    {
+        title: 'Sent declarations',
+        url: '/declarations'
+    },
+    {
+        title: 'Sent checks',
+        url: '/checks'
+    },
+    {
+        title: 'Debt info',
+        url: '/debt_info'
+    }
+]
+
 export const TaxpayersMaket = () => {
     return (
         <Container fluid="true">
             <Grid container spacing={2}>
                 <Grid className="justify-content-md-left" item xs={2}>
-                    <LeftToolBar />
+                    <LeftToolBar sidebarUrls = {sidebarUrls}/>
                 </Grid>
                 <Grid item xs={10}>
                     <Switch>
